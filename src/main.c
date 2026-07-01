@@ -1,4 +1,5 @@
 #include<stdio.h>
+#include "raylib.h"
 
 typedef struct {
 	double x;
@@ -11,7 +12,7 @@ typedef struct {
 	double radius;		// m
 	double mass;		// kg
 
-	//variable
+	//variables
 	vector position;	// m
 	vector velocity;	// m/s
 	vector force; 		// m/s2
@@ -19,10 +20,10 @@ typedef struct {
 
 
 void apply_gravity(point* obj) {
-	obj->force.y -= 9.8;
+	obj->force.y -= 9.8 * obj->mass;
 }
 
-int main () {
+int main (void) {
 	point p = {
 		1.0, 
 		1.0, 
@@ -30,8 +31,16 @@ int main () {
 		{0.0, 0.0},
 		{0.0, 0.0}
 	};
-	while (1) {
+
+	InitWindow(800, 450, "YAP");
+	SetTargetFPS(60);
+	while (!WindowShouldClose()) {
 		
+		BeginDrawing();
+			ClearBackground(RAYWHITE);
+		EndDrawing();
 	}	
+
+	CloseWindow();
 	return 0;
 }

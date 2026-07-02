@@ -1,0 +1,7 @@
+# ninja log v7
+26	847	8047019059606127	CMakeFiles/YAP.dir/src/main.c.obj	7282a07786bf9ad7
+191	882	8047024775006568	YAP.exe	8e4a61b93504b865
+820	2522	8047099570468657	build.ninja	f93ebfc00f2ea03e
+820	2522	8047099570468657	C:/Users/예기옥/Documents/GitHub/Yet_Another_Physics_Engine-YAP-/build/cmake_install.cmake	f93ebfc00f2ea03e
+76	1994	8047110283971629	CMakeFiles/YAP.dir/src/main.c.obj	7282a07786bf9ad7
+1995	2900	8047110303140131	YAP.exe	8e4a61b93504b865

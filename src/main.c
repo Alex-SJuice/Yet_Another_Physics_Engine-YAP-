@@ -1,23 +1,6 @@
-#include<stdio.h>
+#include <stdio.h>
 #include "raylib.h"
-
-typedef struct {
-	double x;
-	double y;
-} vector;
-
-//the simplest object to simulate
-typedef struct {
-	//constants
-	double radius;		// m
-	double mass;		// kg
-
-	//variables
-	vector position;	// m
-	vector velocity;	// m/s
-	vector force; 		// m/s2
-} point;
-
+#include "objects.h"
 
 void apply_gravity(point* obj) {
 	obj->force.y -= 9.8 * obj->mass;
@@ -25,7 +8,7 @@ void apply_gravity(point* obj) {
 
 int main (void) {
 	point p = {
-		1.0, 
+		10.0, 
 		1.0, 
 		{0.0, 0.0},
 		{0.0, 0.0},
@@ -38,6 +21,8 @@ int main (void) {
 		
 		BeginDrawing();
 			ClearBackground(RAYWHITE);
+
+			DrawCircle((int)p.position.x, (int)p.position.y, p.radius, BLUE);
 		EndDrawing();
 	}	
 
